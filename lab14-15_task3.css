@@ -1,0 +1,224 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(252, 242, 223);
+    color: tomato;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+::selection{
+    color: chocolate;
+    background-color: rgba(255, 217, 0, 0.7);
+}
+header{
+    padding-left: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    height: 10vh;
+}
+header h1{
+    border-bottom: 5px double tomato;
+}
+main h2{
+    font-size: 16px;
+    margin-bottom: -10px;
+}
+main h3{
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+.out{
+    display: flex;
+    flex-flow: column wrap;
+    height: 80vh;
+}
+.in, .menu{
+    background-color: bisque;
+    border: 0.3vw solid whitesmoke;
+    border-radius: 5px;
+    margin: 0.5vw;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.in{
+    max-height: 25vh;
+    min-width: 340px;
+}
+.in:hover{
+    box-shadow: 5px 5px 10px gray;
+}
+img{
+    width: 110px;
+    height: 70px;
+    float: left;
+    margin: 0 10px 5px 0;
+}
+input[type="radio"]{
+    display: none;
+}
+.out .menu{
+    padding: 10px 25px;
+    display: flex;
+    flex-flow: column;
+    order: 1;
+    min-height: 76vh;
+}
+.out .menu label{
+    text-align: center;
+}
+.out .menu label[for^="rb"]{
+    margin: 5px;
+    padding: 10px;
+    background-color: cornsilk;
+    border: 1px solid burlywood;
+    border-radius: 5px;
+}
+.out .menu label[for^="rb"]:hover{
+    cursor: pointer;
+    background-color: coral;
+    color: wheat;
+    border: 1px solid indianred;
+}
+.in p{
+    border-top: 1px dotted chocolate;
+    padding-top: 7px;
+    margin-top: auto;
+}
+footer{
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+footer a{
+    text-decoration: none;
+}
+footer p:last-child{
+    margin-left: auto;
+}
+#rb1:checked ~ .out > .in:not(.pie),
+#rb2:checked ~ .out > .in:not(.casserole),
+#rb3:checked ~ .out > .in:not(.cake),
+#rb4:checked ~ .out > .in:not(.cupcake),
+#rb5:checked ~ .out > .in:not(.roll){
+    background-color: #ccc;
+    color: gray;
+}
+#rb1:checked ~ .out > :not(.pie) > img,
+#rb2:checked ~ .out > :not(.casserole) > img,
+#rb3:checked ~ .out > :not(.cake) > img,
+#rb4:checked ~ .out > :not(.cupcake) > img,
+#rb5:checked ~ .out > :not(.roll) > img{
+    filter: grayscale(1);
+}
+#rb1:checked ~ .out > :not(.pie) > p,
+#rb2:checked ~ .out > :not(.casserole) > p,
+#rb3:checked ~ .out > :not(.cake) > p,
+#rb4:checked ~ .out > :not(.cupcake) > p,
+#rb5:checked ~ .out > :not(.roll) > p{
+    border-color: gray;
+}
+#rb1:checked ~ .out .menu label[for="rb1"],
+#rb2:checked ~ .out .menu label[for="rb2"],
+#rb3:checked ~ .out .menu label[for="rb3"],
+#rb4:checked ~ .out .menu label[for="rb4"],
+#rb5:checked ~ .out .menu label[for="rb5"]{
+    background-color: tomato;
+    border-color: crimson;
+    color: wheat;
+}
+@media (max-width: 1200px){
+    .out{
+        flex-flow: row wrap;
+        width: 98vw;
+        height: auto;
+    }
+    .in{
+        min-height: 235px;
+        max-width: 295px;
+        min-width: auto;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .in p{
+        display: none;
+    }
+    .in img{
+        float: none;
+        width: 275px;
+        height: 175px;
+        margin: 0;
+    }
+    .in h2, 
+    .in h3{
+        margin: 0;
+    }
+    .in h2{
+        order: 1;
+    }
+    .in h3::after{
+        content: ':\00a0';
+    }
+    .out .menu{
+        background-color: transparent;
+        border: 0.3vw solid transparent;
+        flex-flow: row wrap;
+        order: 0;
+        min-height: 20vh;
+        min-width: 97vw;
+    }
+    .out .menu label[for="range"],
+    .out .menu input[type="range"]{
+        display: none;
+    }
+    .out .menu label[for^="rb"]{
+        flex: 1 1 20vw;
+        max-height: 20px;
+    }
+    footer a{
+        display: block;
+    }
+}
+@media (max-width: 730px){
+    .out{
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+    .in{
+        background-color: transparent;
+        border: 0.3vw solid transparent;
+        padding: 0;
+        margin-bottom: 20px;
+        min-height: auto;
+        max-width: 97vw;
+        justify-content: center;
+    }
+    .in h2, 
+    .in h3{
+        display: none;
+    }
+    .in img{
+        width: 330px;
+        height: 210px;
+        border-radius: 5px;
+    }
+    .in:hover{
+        box-shadow: 5px 5px 10px transparent;
+    }
+    img:hover{
+        box-shadow: 5px 5px 10px gray;
+    }
+    #rb1:checked ~ .out > .in:not(.pie),
+    #rb2:checked ~ .out > .in:not(.casserole),
+    #rb3:checked ~ .out > .in:not(.cake),
+    #rb4:checked ~ .out > .in:not(.cupcake),
+    #rb5:checked ~ .out > .in:not(.roll){
+        background-color: transparent;
+    }
+    footer{
+        flex-flow: column wrap;
+    }
+    footer p:last-child{
+        margin-left: 0;
+    }
+}
