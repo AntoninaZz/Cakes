@@ -19,10 +19,10 @@ This project is an interactive gallery of confectionery recipes with a responsiv
 - **Mobile View:**
   ![Mobile Screenshot](https://github.com/AntoninaZz/Cakes/blob/main/mobile-screenshot.png)
 - **Tablet View:**
-  ![Tablet Screenshot](https://github.com/AntoninaZz/Cakes/blob/main/path/to/tablet-screenshot.png)
+  ![Tablet Screenshot](https://github.com/AntoninaZz/Cakes/blob/main/tablet-screenshot.png)
 - **Desktop View:**
-  ![Desktop Screenshot](https://github.com/AntoninaZz/Cakes/blob/main/path/to/desktop-screenshot.png)
-  <img src="[path/to/desktop-screenshot.png](https://github.com/AntoninaZz/Cakes/blob/main/path/to/desktop-screenshot.png)" width="200px" alt="Desktop Screenshot">
+  ![Desktop Screenshot](https://github.com/AntoninaZz/Cakes/blob/main/desktop-screenshot.png)
+  <img src="[path/to/desktop-screenshot.png](https://github.com/AntoninaZz/Cakes/blob/main/desktop-screenshot.png)" width="200px" alt="Desktop Screenshot">
 
 ##
 
